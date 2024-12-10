@@ -25,5 +25,35 @@ Scenario Outline: Is it Friday yet?
 .Test passés
 image::test_tp1.png[width=80%]
 
-== TP2...
+== TP2
 
+.Classe Order.java
+[source,java]
+---
+private static class Order {
+
+        private List<String> cocktails;
+        private String owner, target;
+
+        public Order() {
+            this.cocktails = List.of();
+        }
+
+        public void declareOwner(String owner) {
+            this.owner = owner;
+        }
+
+        public void declareTarget(String target) {
+            this.target = target;
+        }
+
+        public List<String> getCocktails(int nb) {
+            return this.cocktails.subList(0, nb);
+        }
+    }
+---
+
+! La classe est static car déclarée dans la classe CocktailSteps.java
+
+.Test passés
+image::test_tp2.png[width=80%]
