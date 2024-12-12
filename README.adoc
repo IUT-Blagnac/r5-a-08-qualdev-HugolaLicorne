@@ -174,3 +174,193 @@ public class StepDefinitions {
 
 .Test passés
 image::test_tp3.png[width=80%]
+
+== TP4
+
+.Documentation cukedoctor TP2
+
+:toc: right
+:backend: html5
+:doctitle: Living Documentation
+:doctype: book
+:icons: font
+:!numbered:
+:sectanchors:
+:sectlink:
+:docinfo:
+:source-highlighter: highlightjs
+:toclevels: 3
+:hardbreaks:
+:chapter-label: Chapter
+:version-label: Version
+
+= *Living Documentation*
+
+== *Summary*
+[cols="12*^m", options="header,footer"]
+|===
+3+|Scenarios 7+|Steps 2+|Features: 1
+
+|[green]#*Passed*#
+|[red]#*Failed*#
+|Total
+|[green]#*Passed*#
+|[red]#*Failed*#
+|[purple]#*Skipped*#
+|[maroon]#*Pending*#
+|[yellow]#*Undefined*#
+|[blue]#*Missing*#
+|Total
+|Duration
+|Status
+
+12+^|*<<Cocktail-Ordering>>*
+|1
+|0
+|1
+|3
+|0
+|0
+|0
+|0
+|0
+|3
+|009ms
+|[green]#*passed*#
+12+^|*Totals*
+|1|0|1|3|0|0|0|0|0|3 2+|009ms
+|===
+
+== *Features*
+
+[[Cocktail-Ordering, Cocktail Ordering]]
+=== *Cocktail Ordering*
+
+ifndef::backend-pdf[]
+minmax::Cocktail-Ordering[]
+endif::[]
+****
+As Romeo, I want to offer a drink to Juliette so that we can discuss together (and maybe more).
+****
+
+==== Scenario: Creating an empty order
+
+==========
+Given ::
+"Romeo" who wants to buy a drink icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+an order is declared for "Juliette" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+there is 0 cocktail in the order icon:thumbs-up[role="green",title="Passed"] [small right]#(006ms)#
+==========
+
+
+.Documentation TP3 avec cukedoctor
+
+:toc: right
+:backend: html5
+:doctitle: Living Documentation
+:doctype: book
+:icons: font
+:!numbered:
+:sectanchors:
+:sectlink:
+:docinfo:
+:source-highlighter: highlightjs
+:toclevels: 3
+:hardbreaks:
+:chapter-label: Chapter
+:version-label: Version
+
+= *Living Documentation*
+
+== *Summary*
+[cols="12*^m", options="header,footer"]
+|===
+3+|Scenarios 7+|Steps 2+|Features: 1
+
+|[green]#*Passed*#
+|[red]#*Failed*#
+|Total
+|[green]#*Passed*#
+|[red]#*Failed*#
+|[purple]#*Skipped*#
+|[maroon]#*Pending*#
+|[yellow]#*Undefined*#
+|[blue]#*Missing*#
+|Total
+|Duration
+|Status
+
+12+^|*<<Managing-players-in-a-list-based-on-a-random-draw>>*
+|3
+|0
+|3
+|13
+|0
+|0
+|0
+|0
+|0
+|13
+|016ms
+|[green]#*passed*#
+12+^|*Totals*
+|3|0|3|13|0|0|0|0|0|13 2+|016ms
+|===
+
+== *Features*
+
+[[Managing-players-in-a-list-based-on-a-random-draw, Managing players in a list based on a random draw]]
+=== *Managing players in a list based on a random draw*
+
+ifndef::backend-pdf[]
+minmax::Managing-players-in-a-list-based-on-a-random-draw[]
+endif::[]
+****
+I want to add or remove players from the list
+****
+
+==== Scenario: Add a player to the list when the draw is positive
+
+==========
+Given ::
+an initially empty list of players icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+And ::
+a player named "Etienne" is ready to be added icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+When ::
+the random draw is positive icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+Etienne must be added to the list icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+And ::
+list size must be 1 icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+==========
+
+==== Scenario: Remove a player from the list when the random draw is negative
+
+==========
+Given ::
+a list containing the player "Bastien" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+When ::
+the random draw is negative icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+the player "Bastien" must be removed from the list icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+And ::
+list size must be 0 icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+==========
+
+==== Scenario: Do nothing when the draw is neutral
+
+==========
+Given ::
+a list containing the player "Eliot" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+When ::
+the random draw is neutral icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+the list must contain only the player "Eliot" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+And ::
+list size must be 1 icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+==========
+
+
+
